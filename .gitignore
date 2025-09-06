@@ -3,3 +3,4 @@ websocketdemo/
 *.iml
 .idea/
 target/
+.vscode
