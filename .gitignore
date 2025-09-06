@@ -2,4 +2,5 @@ websocketdemo/
 *.log
 *.iml
 .idea/
+target/
 .vscode/
