@@ -4,8 +4,6 @@ package com.kiran.taskmanager.model;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-import javax.management.relation.Role;
-
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 

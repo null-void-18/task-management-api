@@ -1,5 +1,6 @@
 package com.kiran.taskmanager.dto;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import lombok.AllArgsConstructor;
@@ -18,6 +19,6 @@ public class UserRequestDto {
     private String name;
     private String email;
     private String password;
-    private Set<Long> roleIds; // clean, safe
+    private Set<Long> roleIds = new HashSet<>();
 }
 
