@@ -1,6 +1,8 @@
 package com.kiran.taskmanager.service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -36,6 +38,25 @@ public class TaskService {
         Task savedTask = taskRepository.save(task);
 
         return mapToDto(savedTask);
+    }
+
+    public TaskResponseDto getTaskById(Long id) {
+        Task task = taskRepository.findById(id)
+                    .orElseThrow(() -> new TaskNotFoundException("Task not found with id:" + id));
+        
+        return mapToDto(task);
+    }
+
+    public List<TaskResponseDto> getAllTasks() {
+        List<Task> tasks = taskRepository.findAll();
+        
+        List<TaskResponseDto> savedTasks = new ArrayList<>();
+
+        for(Task task : tasks) {
+            savedTasks.add(mapToDto(task));
+        }
+
+        return savedTasks;
     }
 
     public TaskResponseDto updateTask(Long id,TaskRequestDto taskRequestDto) {
