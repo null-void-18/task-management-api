@@ -29,7 +29,7 @@ public class TaskResponseDto {
 
     private LocalDateTime updatedAt;
 
-    private UserResponseDto assignedUserId;
+    private UserResponseDto assignedUser;
 
     private TaskStatus status;
 }

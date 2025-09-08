@@ -14,10 +14,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Builder;
 
 
 @Entity
 @Table(name = "tasks")
+@Builder
 public class Task {
 
     @Id
