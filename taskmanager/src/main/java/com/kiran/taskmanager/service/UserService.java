@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -20,17 +19,17 @@ import com.kiran.taskmanager.repository.UserRepository;
 
 @Service
 public class UserService {
-    @Autowired
     private PasswordEncoder passwordEncoder;
 
     private RoleRepository roleRepository;
 
     private UserRepository userRepository;
 
-    public UserService(RoleRepository roleRepository, UserRepository userRepository) {
-        this.roleRepository = roleRepository;
+    public UserService(UserRepository userRepository,RoleRepository roleRepository,PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
-    }    
+        this.roleRepository = roleRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
 
     public UserResponseDto createUser(UserRequestDto userRequestDto) {
