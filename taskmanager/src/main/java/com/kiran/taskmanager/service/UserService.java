@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.kiran.taskmanager.dto.RoleResponseDto;
@@ -18,6 +20,8 @@ import com.kiran.taskmanager.repository.UserRepository;
 
 @Service
 public class UserService {
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     private RoleRepository roleRepository;
 
@@ -31,7 +35,7 @@ public class UserService {
 
     public UserResponseDto createUser(UserRequestDto userRequestDto) {
         User user = mapToEntity(userRequestDto);
-
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         User savedUser =userRepository.save(user);
 
         return mapToDto(savedUser);
@@ -59,7 +63,10 @@ public class UserService {
     
         user.setName(userRequestDto.getName());
         user.setEmail(userRequestDto.getEmail());
-        user.setPassword(userRequestDto.getPassword());
+    
+        if (userRequestDto.getPassword() != null && !userRequestDto.getPassword().isEmpty()) {
+            user.setPassword(passwordEncoder.encode(userRequestDto.getPassword()));
+        }
     
         Set<Role> roles = userRequestDto.getRoleIds()
             .stream()
