@@ -1,0 +1,56 @@
+2025-09-10T18:32:27.695+05:30  INFO 63522 --- [taskmanager] [main] c.k.t.TaskmanagerApplicationTests        : Starting TaskmanagerApplicationTests using Java 21.0.7 with PID 63522 (started by kiran.sekhar in /Users/kiran.sekhar/Desktop/Java projects/taskmanager)
+2025-09-10T18:32:27.697+05:30 DEBUG 63522 --- [taskmanager] [main] c.k.t.TaskmanagerApplicationTests        : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-10T18:32:27.697+05:30  INFO 63522 --- [taskmanager] [main] c.k.t.TaskmanagerApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2025-09-10T18:32:28.078+05:30  INFO 63522 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-10T18:32:28.114+05:30  INFO 63522 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2025-09-10T18:32:28.374+05:30  INFO 63522 --- [taskmanager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-10T18:32:28.411+05:30  INFO 63522 --- [taskmanager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-10T18:32:28.433+05:30  INFO 63522 --- [taskmanager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-10T18:32:28.559+05:30  INFO 63522 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-10T18:32:28.572+05:30  INFO 63522 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-10T18:32:28.669+05:30  INFO 63522 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5402612e
+2025-09-10T18:32:28.670+05:30  INFO 63522 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-10T18:32:28.707+05:30  INFO 63522 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-10T18:32:29.146+05:30  INFO 63522 --- [taskmanager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-10T18:32:29.295+05:30  INFO 63522 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-10T18:32:29.456+05:30  INFO 63522 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-09-10T18:32:29.549+05:30  WARN 63522 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-10T18:32:29.901+05:30  INFO 63522 --- [taskmanager] [main] c.k.t.TaskmanagerApplicationTests        : Started TaskmanagerApplicationTests in 2.351 seconds (process running for 2.781)
+2025-09-10T18:32:30.233+05:30  INFO 63522 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-10T18:32:30.234+05:30  INFO 63522 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-10T18:32:30.236+05:30  INFO 63522 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-10T18:35:19.741+05:30  INFO 65135 --- [taskmanager] [main] c.k.t.TaskmanagerApplicationTests        : Starting TaskmanagerApplicationTests using Java 21.0.7 with PID 65135 (started by kiran.sekhar in /Users/kiran.sekhar/Desktop/Java projects/taskmanager)
+2025-09-10T18:35:19.741+05:30 DEBUG 65135 --- [taskmanager] [main] c.k.t.TaskmanagerApplicationTests        : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-10T18:35:19.742+05:30  INFO 65135 --- [taskmanager] [main] c.k.t.TaskmanagerApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2025-09-10T18:35:20.122+05:30  INFO 65135 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-10T18:35:20.156+05:30  INFO 65135 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2025-09-10T18:35:20.422+05:30  INFO 65135 --- [taskmanager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-10T18:35:20.466+05:30  INFO 65135 --- [taskmanager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-10T18:35:20.489+05:30  INFO 65135 --- [taskmanager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-10T18:35:20.611+05:30  INFO 65135 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-10T18:35:20.625+05:30  INFO 65135 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-10T18:35:20.726+05:30  INFO 65135 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5bb99d1d
+2025-09-10T18:35:20.727+05:30  INFO 65135 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-10T18:35:20.762+05:30  INFO 65135 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-10T18:35:21.233+05:30  INFO 65135 --- [taskmanager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-10T18:35:21.379+05:30  INFO 65135 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-10T18:35:21.543+05:30  INFO 65135 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-09-10T18:35:21.639+05:30  WARN 65135 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-10T18:35:21.994+05:30  INFO 65135 --- [taskmanager] [main] c.k.t.TaskmanagerApplicationTests        : Started TaskmanagerApplicationTests in 2.393 seconds (process running for 2.843)
+2025-09-10T18:35:22.320+05:30  INFO 65135 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-10T18:35:22.321+05:30  INFO 65135 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-10T18:35:22.324+05:30  INFO 65135 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

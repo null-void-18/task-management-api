@@ -3,6 +3,7 @@ package com.kiran.taskmanager.controller;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kiran.taskmanager.dto.UserRequestDto;
 import com.kiran.taskmanager.dto.UserResponseDto;
 import com.kiran.taskmanager.service.UserService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/users")
@@ -39,16 +42,17 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public UserResponseDto createUser(@RequestBody UserRequestDto userRequestDto) {
+    public UserResponseDto createUser(@Valid @RequestBody UserRequestDto userRequestDto) {
         return userService.createUser(userRequestDto);
     }
 
     @PutMapping("/{id}")
-    public UserResponseDto updateUser(@PathVariable Long id, @RequestBody UserRequestDto userRequestDto) {
+    public UserResponseDto updateUser(@PathVariable Long id,@Valid @RequestBody UserRequestDto userRequestDto) {
         return userService.updateUser(id, userRequestDto);
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);

@@ -16,6 +16,8 @@ import com.kiran.taskmanager.payload.LoginResponse;
 import com.kiran.taskmanager.service.JwtService;
 import com.kiran.taskmanager.service.UserService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -31,7 +33,7 @@ public class AuthController {
 
     // Registration endpoint
     @PostMapping("/register")
-    public ResponseEntity<UserResponseDto> registerUser(@RequestBody UserRequestDto userRequestDto) {
+    public ResponseEntity<UserResponseDto> registerUser(@Valid @RequestBody UserRequestDto userRequestDto) {
         UserResponseDto response = userService.createUser(userRequestDto);
         return ResponseEntity.ok(response);
     }
